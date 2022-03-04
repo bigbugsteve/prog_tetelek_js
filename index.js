@@ -3,7 +3,7 @@ const pelda1 = document.querySelector('.input_pelda1');
 let input_pelda1;
 let szam;
 let kivalasztasIndex;
-
+let osszeg = 0;
 function szamFrissitese (e) {
     input_pelda1 = Number(e.target.value)
 }
@@ -52,10 +52,19 @@ function highlightNumber () {
 // ============ ÖSSZEGZÉS ============
 const osszegzes = () => {
     console.log("összegzés")
+    let length = tomb.length;
+
+    for(i = 0; i < length; i++) {
+        console.log(typeof tomb[i])
+        osszeg += Number(tomb[i]);
+    }
+    console.log(" 🚀 ~ file: index.js ~ line 59 ~ osszegzes ~ osszeg", osszeg)
+    const sumTitle = document.querySelector(".sum-title");
+    const osszegNode = document.querySelector(".osszeg");
+    osszegNode.innerHTML = osszeg;
+    sumTitle.classList.add('visible')
+
 }
 
-
-
-
 // Event listeners
-pelda1.addEventListener('keyup', szamFrissitese);
+// pelda1.addEventListener('keyup', szamFrissitese);
