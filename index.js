@@ -34,19 +34,28 @@ function highlightNumber () {
     tombLista.children.item(kivalasztasIndex).classList.add("active")
 }
 
-function kivalasztas () {
-    let i = 0;
-    if(!tomb.includes(input_pelda1)) {
-        alert('Ne szórakozzál, a listából válassz!')
-    } else {
-        do {
-            console.log(i)
-            i++
-        } while (tomb[i] !== input_pelda1);
-    }
-    kivalasztasIndex = i;
-    highlightNumber()
+// ============ KIVÁLASZTÁS ============
+// function kivalasztas () {
+//     let i = 0;
+//     if(!tomb.includes(input_pelda1)) {
+//         alert('Ne szórakozzál, a listából válassz!')
+//     } else {
+//         do {
+//             console.log(i)
+//             i++
+//         } while (tomb[i] !== input_pelda1);
+//     }
+//     kivalasztasIndex = i;
+//     highlightNumber()
+// }
+
+// ============ ÖSSZEGZÉS ============
+const osszegzes = () => {
+    console.log("összegzés")
 }
+
+
+
 
 // Event listeners
 pelda1.addEventListener('keyup', szamFrissitese);
