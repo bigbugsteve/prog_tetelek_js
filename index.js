@@ -53,9 +53,11 @@ function highlightNumber () {
 const osszegzes = () => {
     console.log("összegzés")
     let length = tomb.length;
+    console.log(" 🚀 ~ file: index.js ~ line 56 ~ osszegzes ~ length", length)
 
     for(i = 0; i < length; i++) {
-        console.log(typeof tomb[i])
+        console.log(tomb[i])
+        console.log('Hello')
         osszeg += Number(tomb[i]);
     }
     console.log(" 🚀 ~ file: index.js ~ line 59 ~ osszegzes ~ osszeg", osszeg)
